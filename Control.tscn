@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Control.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -91.0
+margin_top = -20.0
+margin_right = 91.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 182.0
+margin_bottom = 14.0
+text = "Most Accessible Game Ever!"
+
+[node name="start_button" type="Button" parent="VBoxContainer"]
+margin_top = 34.0
+margin_right = 182.0
+margin_bottom = 54.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+action_mode = 0
+text = "Start!"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="options_button" type="Button" parent="VBoxContainer"]
+margin_top = 74.0
+margin_right = 182.0
+margin_bottom = 94.0
+focus_mode = 0
+action_mode = 0
+text = "Options"
+flat = true
+
+[node name="credits_button" type="Button" parent="VBoxContainer"]
+margin_top = 114.0
+margin_right = 182.0
+margin_bottom = 134.0
+focus_mode = 0
+action_mode = 0
+text = "Credits"
+flat = true
+
+[node name="quit_button" type="Button" parent="VBoxContainer"]
+margin_top = 154.0
+margin_right = 182.0
+margin_bottom = 174.0
+focus_mode = 0
+action_mode = 0
+text = "Exit"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/options_button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
